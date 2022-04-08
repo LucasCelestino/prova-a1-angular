@@ -1,0 +1,20 @@
+<table border="1" style="margin-top:50px;">
+  <thead>
+    <tr>
+      <th>Código</th>
+      <th>Nome</th>
+      <th>Dia da Semana</th>
+      <th>Horário</th>
+      <th>Detalhes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let disciplina of disciplinas; index as i">
+      <td>{{ disciplina.id }}</td>
+      <td>{{ disciplina.nome }}</td>
+      <td>{{ disciplina.dia }}</td>
+      <td>{{ disciplina.horario }}</td>
+      <td><a [routerLink]="['/lista-disciplinas', i]">Ver Mais</a></td>
+    </tr>
+  </tbody>
+</table>
